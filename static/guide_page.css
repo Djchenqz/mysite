@@ -1,0 +1,69 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+html, body, div.container {
+	height:100%;
+}
+div.jumbotron {
+	height:100%;
+	background-image: url('images/index.jpg');
+	background-size: 100% 100%;
+}
+div.container {
+	position: absolute;
+	left: 50%;
+	top: 30%;
+	transform: translate(-50%, -50%);
+}	
+div.container h1 {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}	
+div.container p {
+	position: absolute;
+	left: 50%;
+	top: 75%;
+	transform: translate(-50%, -50%);
+}
+div.container p a {
+	color: #c4a50f;
+	background-color: #0000001a;
+
+}
+.content-left {
+	font-size: 150%;
+	width: 20%;
+    height: 25%;
+    position: absolute;
+    left: 15%;
+    top: 23%;
+
+}
+
+.text {
+	width: 20%;
+    height: 40%;
+    position: absolute;
+    left: 8%;
+    top: 50%;
+
+}
+.text p {
+	font-size: 70%;
+}
+.content-left p{animation: glow 800ms ease-out infinite alternate; }
+@keyframes glow {
+    0% {
+        color: green;
+        text-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 1px 0 green;
+    }
+    100% {
+        color: red;
+        text-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 1px 0 red;
+    }
+}

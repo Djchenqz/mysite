@@ -1,0 +1,44 @@
+h3.content-title {
+	font-size: 222%;
+	text-align: center;
+	margin-top: 4em;
+	margin-bottom: 2em;
+}
+div.container {
+	margin-top: 4em;
+    border-top: 1px solid #ccc;
+    padding-top: 2em;
+    background-color: #ffffff38;
+}
+
+div#chart-container {
+	margin: 0 auto;
+	height: 20em;
+	min-width: 20em;
+	max-width: 30em;
+}
+div.hot-blog {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 2em;
+	margin-bottom: 4em;
+}
+div.hot-blog ul li {
+	text-align: left;
+	text-indent: 2em;
+}
+div.panel-heading {
+	border-bottom: 1px solid #eee;
+}
+
+.container{animation: glow 800ms ease-out infinite alternate; }
+@keyframes glow {
+    0% {
+        border-top-color: #393;
+        box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 1px 0 #393;
+    }
+    100% {
+        border-top-color: #6f6;
+        box-shadow: 0 0 20px rgba(0,255,0,.6), inset 0 0 10px rgba(0,255,0,.4), 0 1px 0 #6f6;
+    }
+}

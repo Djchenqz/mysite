@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{# 页面标题 #}
+{% block title %}我的网站|首页{% endblock %}
+
+{# css拓展 #}
+{% block header_extends %}
+	<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+	<script src="http://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+   
+{% endblock %}
+{% block nav_home_active %}active{% endblock %}
+{# 页面内容 #}
+{% block content %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="panel-heading">
+                <h2 class="panel-title">文章分类</h2>
+                </div>
+                <div class="panel-body">
+                    <ul class="blog-types">
+                        {% for blog_type in blog_types %}
+                        <li><a href="{% url 'blogs_with_type' blog_type.pk %}">{{ blog_type.type_name }}</a>({{ blog_type.blog_count }})</li>
+                        {% empty %}
+                        <li>暂无分类~</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="panel-heading">
+                <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
+                </div>
+                <div class="panel-body">
+                    <ul class="blog-types">
+                        {% for blog in newest_blogs %}
+                        <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></li>
+                        {% empty %}
+                        <li>暂无分类~</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-5">
+                <div class="tabbable" id="tabs-50475">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                             <a href="#panel-15109" data-toggle="tab">热门排行</a>
+                        </li>
+                        <li>
+                             <a href="#panel-381593" data-toggle="tab">阅读量预览</a>
+                        </li>
+                        <li>
+                             <a href="#panel-381594" data-toggle="tab">公众号</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="panel-15109">
+                            <div class="hot-blog">
+                                <ul>
+                                    {% for hot_blog in hot_blogs %}
+                                    <li><a href="{% url 'blog_detail' hot_blog.object_id %}">{{ hot_blog.content_object.title }}</a>({{ hot_blog.read_num }})</li>
+                                    {% empty %}
+                                    <li>暂无排行</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="panel-381593">
+                            <div id="chart-container"></div>
+                        </div>
+                        <div class="tab-pane" id="panel-381594">
+                            <p>公众号还在建设中，先占个位，敬请期待~</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<script>
+        // 图表配置
+        var options = {
+            chart: {
+                type: 'line'                          //指定图表的类型，默认是折线图（line）
+            },
+            title: {
+                text: null                  // 标题
+            },
+            xAxis: {
+                categories: {{ dates|safe }},   // x 轴分类
+                title: { text: '前7日阅读'},
+            },
+            yAxis: {
+                title: {
+                    text: null               // y 轴标题
+                },
+                labels: {
+                	enabled: false
+                },
+                gridLineDashStyle: 'Dash'
+            },
+            series: [{                              // 数据列
+                name: '阅读量',                        // 数据列名
+                data: {{ read_nums }},                     // 数据
+            }],
+            plotOptions: {
+                line: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+            	enabled: false
+            },
+            credits: {
+            	enabled: false
+            },
+        };
+        // 图表初始化函数
+        var chart = Highcharts.chart('chart-container', options);
+	</script>
+    
+   
+{% endblock %}
