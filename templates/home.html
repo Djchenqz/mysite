@@ -15,35 +15,37 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-xs-3">
-                <div class="panel-heading">
-                <h2 class="panel-title">文章分类</h2>
-                </div>
-                <div class="panel-body">
-                    <ul class="blog-types">
-                        {% for blog_type in blog_types %}
-                        <li><a href="{% url 'blogs_with_type' blog_type.pk %}">{{ blog_type.type_name }}</a>({{ blog_type.blog_count }})</li>
-                        {% empty %}
-                        <li>暂无分类~</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
             <div class="col-xs-4">
-                <div class="panel-heading">
-                <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                    <h2 class="panel-title">文章分类</h2>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="blog-types">
+                            {% for blog_type in blog_types %}
+                            <li><a href="{% url 'blogs_with_type' blog_type.pk %}">{{ blog_type.type_name }}</a>({{ blog_type.blog_count }})</li>
+                            {% empty %}
+                            <li>暂无分类~</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    <ul class="blog-types">
-                        {% for blog in newest_blogs %}
-                        <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></li>
-                        {% empty %}
-                        <li>暂无分类~</li>
-                        {% endfor %}
-                    </ul>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                    <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="blog-types">
+                            {% for blog in newest_blogs %}
+                            <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></li>
+                            {% empty %}
+                            <li>暂无分类~</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-5">
+            <div class="col-xs-8">
                 <div class="tabbable" id="tabs-50475">
                     <ul class="nav nav-tabs">
                         <li class="active">

@@ -4,7 +4,7 @@
 }
 body {
 	background-image: url(images/background.jpg); 
-	background-size: cover;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: #93e0ed;
@@ -32,23 +32,35 @@ ul.navbar-nav li span {
 }
 
 div.banner-title {
-	width: 30%;
+	width: 40%;
+	display: inline-block;
 }
 
 div.banner-text {
-	width: 50%;
-	position: absolute;
-	right: 50%;
-	bottom:18%;
-	transform: translate(50%);
+	width: 20%;
+	margin-left: 2em;
+	display: inline-block;
 }
 
-div.banner-text p {
-	font-size: 16px;
+div.banner-text p:first-child {
+	font-size: 2vw;
 	color: #2b9d16f5;
+	text-align: left;
+}
+div.banner-text p:last-child {
+	font-size: 2vw;
+	color: #2b9d16f5;
+	text-align: right;
 }
 
-div.banner-title h1,h3 {
+div.banner-title h1{
+	letter-spacing: 0.3em;
+	text-align: left;
+	color: #32533293;
+	font-size: 5vw;
+}
+div.banner-title h3 {
+	font-size: 2.5vw;
 	color: #32533293;
  }
 div.container-fluid {
