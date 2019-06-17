@@ -2,13 +2,7 @@
 	margin: 0;
 	padding: 0;
 }
-/*body {
-	background-image: url(images/background.jpg); 
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	color: #93e0ed;
-}*/
+
 body {
 	background-color: #fafff9;
 }
@@ -25,10 +19,6 @@ div.navbar {
 
 }
 
-/*ul.navbar-right {
-	margin-right: 2em;
-}
-*/
 .jumbotron {
 	background-image: url(images/body_background.jpg);
 	background-repeat: no-repeat;
