@@ -72,3 +72,6 @@ div.footer p {
 	margin: 0;
 	text-align: center;
 }
+div.page-not-found img {
+	width: 100%;
+}

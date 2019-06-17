@@ -5,6 +5,8 @@ from django.db.models import Count
 from read_statistics.utils import get_seven_days_read_data,get_hot_blog
 from blog.models import Blog, BlogType
 
+def error(request):
+	return render(request, '404.html', {})
 
 def home(request):
 	blog_content_type = ContentType.objects.get_for_model(Blog)

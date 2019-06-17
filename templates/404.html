@@ -1,9 +1,12 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block title %}
-    我的网站|页面找不到
+    页面找不到
 {% endblock %}
 
 {% block content %}
-    404，找不到页面！迷路啦？
+<div class="page-not-found">
+	<img src="{% static 'images/404.png' %}">
+</div>
+    
 {% endblock %}

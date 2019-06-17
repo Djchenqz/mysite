@@ -21,6 +21,7 @@ from . import views
 
 
 urlpatterns = [
+    path('a',views.error, name='error'),
 	path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('ckeditor', include('ckeditor_uploader.urls')),
