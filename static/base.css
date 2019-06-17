@@ -2,12 +2,15 @@
 	margin: 0;
 	padding: 0;
 }
-body {
+/*body {
 	background-image: url(images/background.jpg); 
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: #93e0ed;
+}*/
+body {
+	background-color: #fafff9;
 }
 
 ul {
@@ -16,6 +19,10 @@ ul {
 ul.navbar-nav li span {
 	color: white; 
 	text-shadow: black 3px 3px 3px;
+}
+div.navbar {
+	margin-bottom: 0;
+
 }
 
 /*ul.navbar-right {
@@ -27,7 +34,6 @@ ul.navbar-nav li span {
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	backface-visibility: inherit;
-	margin-bottom:0;
 	position: relative;
 }
 
@@ -65,4 +71,14 @@ div.banner-title h3 {
  }
 div.container-fluid {
 	padding: 0 2em;
+}
+
+div.footer {
+	background-color: #eee;
+	margin-top: 4em;
+	padding: 2em;
+}
+div.footer p {
+	margin: 0;
+	text-align: center;
 }
