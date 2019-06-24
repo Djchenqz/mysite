@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes.fields import GenericForeignKey
@@ -18,6 +19,12 @@ class Comment(models.Model):
 
 	def __str__(self):
 		return self.text
+
+	def get_user(self):
+		return self.user
+		
+	def get_url(self):
+		return self.content_object.get_url()
 
 	class Meta:
 		ordering = ['comment_time']

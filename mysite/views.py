@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.contenttypes.models import ContentType
 from django.core.cache import cache
 from django.db.models import Count
+
 from read_statistics.utils import get_seven_days_read_data,get_hot_blog
 from blog.models import Blog, BlogType
 

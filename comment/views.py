@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.contenttypes.models import ContentType
 from django.urls import reverse
+from django.http import JsonResponse
 from .models import Comment
 from .forms import CommentForm
-from django.http import JsonResponse
+
 # Create your views here.
 
 def update_comment(request):
@@ -22,6 +23,9 @@ def update_comment(request):
 			comment.parent = parent
 			comment.reply_to = parent.user
 		comment.save()
+		
+
+
 		data['status'] = 'SUCCESS'
 		data['username'] = comment.user.username
 		data['comment_time'] = comment.comment_time.strftime('%Y-%m-%d %H:%M:%S')

@@ -10,10 +10,7 @@ body {
 ul {
 	list-style-type: none;
 }
-ul.navbar-nav li span {
-	color: white; 
-	text-shadow: black 3px 3px 3px;
-}
+
 div.navbar {
 	margin-bottom: 0;
 
@@ -78,4 +75,8 @@ div.page-not-found img {
 
 div.internal-error img {
 	width: 100%;
+}
+
+span.unread-count {
+    background-color: #d9534f!important;
 }

@@ -1,6 +1,7 @@
 from django.db import models
 from django.core import exceptions
 from django.contrib.auth.models import User
+from django.urls import reverse
 from ckeditor_uploader.fields import RichTextUploadingField
 from read_statistics.models import ReadNumExpandMethod
 
@@ -21,6 +22,12 @@ class Blog(models.Model, ReadNumExpandMethod):
     
     def __str__(self):
         return '<blog: %s>' % self.title
+
+    def get_user(self):
+        return self.author
+
+    def get_url(self):
+        return reverse('blog_detail', kwargs={'blog_pk':self.pk})
 
     class Meta:
         ordering = ['-created_time']
