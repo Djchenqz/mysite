@@ -80,3 +80,14 @@ div.internal-error img {
 span.unread-count {
     background-color: #d9534f!important;
 }
+.search-form button {
+	background: none;
+    border: none;
+    margin-left: -3em;
+    color: #aaa;
+}
+.page-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

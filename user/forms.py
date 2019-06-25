@@ -34,6 +34,10 @@ class RegisterForm(forms.Form):
 	email = forms.CharField(label='邮箱',
 							widget=forms.EmailInput(
 								attrs={'class':'form-control', 'placeholder':'请输入邮箱'}))
+	verification_code = forms.CharField(label='验证码',
+										required=False,
+										widget=forms.TextInput(
+											attrs={'class':'form-control', 'placeholder':'点击“发送验证码”发送到邮箱'}))
 	password = forms.CharField(label='密码',
 							min_length=6, 
 							widget=forms.PasswordInput(
@@ -42,10 +46,7 @@ class RegisterForm(forms.Form):
 							min_length=6, 
 							widget=forms.PasswordInput(
 								attrs={'class':'form-control', 'placeholder':'请再输入密码'}))
-	verification_code = forms.CharField(label='验证码',
-										required=False,
-										widget=forms.TextInput(
-											attrs={'class':'form-control', 'placeholder':'点击“发送验证码”发送到邮箱'}))
+	
 	def __init__(self, *args, **kwargs):
 		if 'request' in kwargs:
 			self.request = kwargs.pop('request')

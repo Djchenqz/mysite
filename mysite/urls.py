@@ -21,7 +21,7 @@ from . import views
 
 
 urlpatterns = [
-    path('a',views.error, name='error'),
+
 	path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('ckeditor', include('ckeditor_uploader.urls')),
@@ -31,6 +31,7 @@ urlpatterns = [
     path('user/',include('user.urls')),
     path('notifications/', include('notifications.urls', namespace='notifications')),
     path('my_notifications/',include('my_notifications.urls')),
+    path('search/', views.search, name='search'),
     
 ]
 
