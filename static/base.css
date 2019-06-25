@@ -80,6 +80,10 @@ div.internal-error img {
 span.unread-count {
     background-color: #d9534f!important;
 }
+.search-form input {
+	display: inline-block;
+	width: 99%;
+}
 .search-form button {
 	background: none;
     border: none;
