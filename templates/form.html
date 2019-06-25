@@ -19,7 +19,16 @@
 							{% if not field.is_hidden %}
 							<label for="{{ field.id_for_label }}">{{ field.label }}</label>
 							{% endif %}
-							{{ field }}
+							{% if field.id_for_label == 'id_verification_code' %}
+							<div class="input-group">
+						        {{ field }}
+						        <span class="input-group-btn">
+							        <button id="send_code" class="btn btn-default">发送验证码</button>
+						        </span>
+							</div>
+							{% else %}
+								{{ field }}
+							{% endif %}
 							<p class="text-danger">{{ field.errors.as_text }}</p>
 						{% endfor %}
 						<span id="tip" class="text-danger">{{ login_form.non_field_errors }}</span>

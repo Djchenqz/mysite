@@ -36,8 +36,10 @@ ul.blog-info-decription li {
 }
 
 div.blog-content {
-	text-indent: 2em;
 	margin-bottom: 2em;
+}
+div.blog-content img {
+	width: 100%
 }
 div.navigation {
 	text-align: center;
