@@ -42,7 +42,7 @@ class RegisterForm(forms.Form):
 							min_length=6, 
 							widget=forms.PasswordInput(
 								attrs={'class':'form-control', 'placeholder':'请输入密码'}))
-	password2 = forms.CharField(label='再输入一次密码',
+	password2 = forms.CharField(label='确认密码',
 							min_length=6, 
 							widget=forms.PasswordInput(
 								attrs={'class':'form-control', 'placeholder':'请再输入密码'}))
