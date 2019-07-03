@@ -15,7 +15,7 @@
 	<div class="container" id="content-detail">
 		<div class="row">
 			<div class="col-xs-10 col-xs-offset-1">
-				<h3>{{ blog.title }}</h3>
+				<h3 class="blog-title">{{ blog.title }}</h3>
 				<ul class="blog-info-decription">
 					<li><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;{{ blog.author }}</li>
 					<li><span class="glyphicon glyphicon-tag" aria-hidden="true"></span>&nbsp;<a href="{% url 'blogs_with_type' blog.blog_type.pk %}">{{ blog.blog_type }}</a></li>

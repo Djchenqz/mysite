@@ -13,6 +13,10 @@ div.blog:not(:last-child) {
 div.blog h3 {
 	margin-top: 0.5em;
 	font-size: 16px;
+
+}
+div.blog h3 a {
+	color: #337ab7;
 }
 
 ul.blog-info {
@@ -27,7 +31,8 @@ ul.blog-info li {
 
 ul.blog-info-decription {
 	list-style-type: none;
-	margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 
 }
 ul.blog-info-decription li {
@@ -37,6 +42,8 @@ ul.blog-info-decription li {
 
 div.blog-content {
 	margin-bottom: 2em;
+	padding: 1em;
+    border: 1px solid #eee;
 }
 div.blog-content img {
 	width: 100%
@@ -107,4 +114,8 @@ div.like .active {
 
 div.panel,div#content-detail {
 	background-color: #ffffff38;
+}
+
+h3.blog-title {
+	margin-bottom: 20px;
 }
