@@ -23,7 +23,7 @@ def home(request):
 	context['dates'] = dates
 	context['hot_blogs'] = hot_blogs
 	context['blog_types'] = BlogType.objects.annotate(blog_count=Count('blog'))
-	context['newest_blogs'] = Blog.objects.all().order_by('created_time')[:10]
+	context['newest_blogs'] = Blog.objects.all().order_by('-created_time')[:10]
 	return render(request, 'home.html', context)
 
 def search(request):
