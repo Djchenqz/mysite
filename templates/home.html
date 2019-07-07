@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {# 页面标题 #}
-{% block title %}何处觅知音{% endblock %}
+{% block title %}见分晓{% endblock %}
 
 {# css拓展 #}
 {% block header_extends %}
@@ -13,10 +13,10 @@
             var bannerTitle = document.getElementById("banner-title");
             
             banner.onmouseover = function(){
-                bannerTitle.innerHTML = "找个读懂你的人";
+                bannerTitle.innerHTML = "让你的实力配得上你的野心";
             }
             banner.onmouseout = function(){
-                bannerTitle.innerHTML = "";
+                bannerTitle.innerHTML = "笨鸟不止要先飞";
             }
         }
     </script>
@@ -25,7 +25,8 @@
 {# 页面内容 #}
 {% block banner %}
 <div class="jumbotron" id="banner">
-    <div id="banner-title"></div>
+    <h2>学习之路</h2>
+    <p id="banner-title">笨鸟不止要先飞</p>
 </div>
 {% endblock %}
 {% block content %}
@@ -33,7 +34,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5 col-lg-3">
-                <div class="panel panel-success">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                     <h2 class="panel-title">文章分类</h2>
                     </div>
@@ -47,7 +48,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel panel-success">
+                <div class="panel panel-default">
                     <div class="panel-heading">
                     <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
                     </div>

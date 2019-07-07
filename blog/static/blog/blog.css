@@ -119,3 +119,9 @@ div.panel,div#content-detail {
 h3.blog-title {
 	margin-bottom: 20px;
 }
+h3.panel-title {
+	font-size: 150%;
+}
+div.blog h3 {
+	font-size: 150%;
+}

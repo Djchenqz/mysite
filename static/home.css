@@ -24,20 +24,21 @@ div.panel-heading {
 
 .jumbotron {
 	height: 200px;
-	background-image: url(images/body_background.jpg);
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	backface-visibility: inherit;
-	position: relative;
+	background-color: #f8f8f9;
+	border-bottom: 1px solid #eee;
 }
 
-div#banner-title {
-	width: 10em;
-	height: 4em;
-    position: absolute;
-    left: 10%;
-    top: 20%;
-	font-size: 222%;
-	color: #d6e9c6;
+#banner h2 {
+	text-align: center;
+	position: relative;
+	color: #8888bb;
+	font-size: 40px;
+}
+#banner p {
+	text-align: center;
+	position: relative;
+	color: #8888bb;
+}
+#banner-title {
 	text-align: center;
 }

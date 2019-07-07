@@ -18,14 +18,15 @@ div.navbar {
 
 div.container-fluid {
 	padding: 0 2em;
+	box-shadow: 0 0 5px #888;
 }
 
 div.container {
 	margin-top: 3em;
 }
 
-div.footer {
-	background-color: #eee;
+div.website-info {
+	background-color: #f5f6f5;
 	margin-top: 4em;
 	padding: 2em;
 }
