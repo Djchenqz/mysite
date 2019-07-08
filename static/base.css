@@ -13,12 +13,13 @@ ul.navbar-right img {
 div.navbar {
 	margin-bottom: 0;
 	border-radius: 0;
+	box-shadow: 0 0 5px #888;
 }
 
 
 div.container-fluid {
 	padding: 0 2em;
-	box-shadow: 0 0 5px #888;
+	
 }
 
 div.container {

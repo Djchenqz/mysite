@@ -18,6 +18,9 @@ div.blog h3 {
 div.blog h3 a {
 	color: #337ab7;
 }
+#blog-list {
+	margin-top: 3em;
+}
 
 ul.blog-info {
 	margin-bottom: 0.5em;

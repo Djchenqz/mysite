@@ -22,6 +22,12 @@ div.panel-heading {
 	border-bottom: 1px solid #eee;
 }
 
+div#chart-container {
+	margin: 0 auto;
+	height: 20em;
+	min-width: 20em;
+	max-width: 30em;
+}
 .jumbotron {
 	height: 200px;
 	background-color: #f8f8f9;
