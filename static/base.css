@@ -18,7 +18,7 @@ div.navbar {
 
 
 div.container-fluid {
-	padding: 0 2em;
+	padding: 0 3em;
 	
 }
 
@@ -48,7 +48,7 @@ span.unread-count {
 }
 .search-form input {
 	display: inline-block;
-	width: 99%;
+	width: 98%;
 }
 .search-form button {
 	background: none;
