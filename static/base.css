@@ -10,7 +10,7 @@ ul.navbar-right img {
 	height: 50px;
 	opacity: 0.1;
 }
-div.navbar {
+div.navbar-default {
 	margin-bottom: 0;
 	border-radius: 0;
 	box-shadow: 0 0 5px #888;

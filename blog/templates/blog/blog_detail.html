@@ -112,6 +112,9 @@
 				</div>
 			</div>
 		</div>
+		<div class="to-top">
+			<img id="to-top" src="{% static 'images/to-top.png' %}">
+		</div>
 		
 	</div>
 {% endblock %}
@@ -246,6 +249,20 @@
 		};
 		if (window.location.hash) {
 		    $('html').animate({scrollTop: $(window.location.hash).offset().top - 60}, 300)
+		};
+		$(document).ready(function(){
+			$(".to-top").fadeOut();
+			$(window).scroll(function(){
+				if($(window).scrollTop()>300){
+					$(".to-top").fadeIn();
+				}else{
+					$(".to-top").fadeOut();
+				}
+			})
+		});
+		var to_top = document.getElementById("to-top");
+		to_top.onclick = function(){
+			$("html").animate({scrollTop: 0}, 300);
 		}
 		
 	</script>

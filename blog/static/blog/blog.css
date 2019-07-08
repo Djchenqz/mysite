@@ -128,3 +128,8 @@ h3.panel-title {
 div.blog h3 {
 	font-size: 150%;
 }
+div.to-top {
+	position: fixed;
+	right: 2em; 
+	bottom: 8em
+}

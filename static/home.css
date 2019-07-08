@@ -48,3 +48,8 @@ div#chart-container {
 #banner-title {
 	text-align: center;
 }
+.img-desc {
+	display: inline-block; 
+	margin-top: 3em;
+	font-size: 150%;
+}
