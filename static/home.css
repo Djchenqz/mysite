@@ -50,6 +50,9 @@ div#chart-container {
 }
 .img-desc {
 	display: inline-block; 
-	margin-top: 3em;
+	margin-top: 1em;
 	font-size: 150%;
+}
+.qr-code {
+	height: 13em;
 }

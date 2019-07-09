@@ -33,7 +33,7 @@
     
     <div class="container">
         <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="col-sm-3 col-md-3 col-lg-3">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                     <h2 class="panel-title">文章分类</h2>
@@ -48,22 +48,24 @@
                         </ul>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                    <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
-                    </div>
-                    <div class="panel-body">
-                        <ul class="blog-types">
-                            {% for blog in newest_blogs %}
-                            <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></li>
-                            {% empty %}
-                            <li>暂无分类~</li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
             </div>
-            <div class="col-sm-8 col-md-8 col-lg-8">
+             <div class="col-sm-3 col-md-3 col-lg-3">
+                 <div class="panel panel-default">
+                     <div class="panel-heading">
+                     <h2 class="panel-title">最新文章&nbsp;<a href="{% url 'blog_list' %}">more></a></h2>
+                     </div>
+                     <div class="panel-body">
+                         <ul class="blog-types">
+                             {% for blog in newest_blogs %}
+                             <li><a href="{% url 'blog_detail' blog.pk %}">{{ blog.title }}</a></li>
+                             {% empty %}
+                             <li>暂无分类~</li>
+                             {% endfor %}
+                         </ul>
+                     </div>
+                 </div>
+             </div>   
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="tabbable" id="tabs-50475">
                     <ul class="nav nav-tabs">
                         <li class="active">
@@ -91,12 +93,12 @@
                             <div class="col-md-10 tab-pane" id="panel-381593">
                                 <div id="chart-container"></div>
                             </div>
-                            <div class="col-md-10 tab-pane" id="panel-381594">
+                            <div class="col-md-12 tab-pane" id="panel-381594">
                                 <div class="row">
-                                    <div class="col-sm-4">
-                                        <img src="{% static 'images/qrode.jpg' %}">
+                                    <div class="col-sm-6">
+                                        <img class="qr-code" src="{% static 'images/qrode.jpg' %}">
                                     </div>
-                                    <div class="col-sm-6 col-sm-offset-1">
+                                    <div class="col-sm-6">
                                         <p class="img-desc">你的野心那么大，那么点墨水怎么够？</p>
                                         <p>
                                         我的微信公众号会写我的转行自学路上的一些经验，和踩过的一些坑。希望能够给你些许帮助。</p>
