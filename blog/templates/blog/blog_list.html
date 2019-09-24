@@ -65,7 +65,7 @@
 			    				<li><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>{% get_comment_count blog %}</li>
 			    				<li><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>{% get_like_count blog %}</li>
 			    			</ul>
-			    			<p>{% autoescape off %}{{ blog.content|truncatechars:120 }}{% endautoescape %}</p>
+			    			<p>{% autoescape off %}{{ blog.content|striptags|truncatechars:120 }}{% endautoescape %}</p>
 			    		</div>
 			    	{% empty %}
 			    		<div class="blog">
